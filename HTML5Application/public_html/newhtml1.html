@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+       #slideContainer {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border: 1px #000000 solid;
+	margin: 20px auto;
+	position: relative;
+}
+ 
+#slideWrap {
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ 
+.slide {
+	width: 400px;
+	height: 400px;
+	float: left;
+	background: url(Nkarner/tort4.jpg) no-repeat 0 0;
+}
+ 
+.two { background: url(Nkarner/tort1.jpg) no-repeat -100px 0; }
+.three { background: url(Nkarner/tort2.jpg) no-repeat -200px 0; }
+.four { background: url(Nkarner/tort3.jpg) no-repeat -300px 0; }
+
+</style>
+    </head>
+    <body>
+       <div id="slideContainer">
+	<div id="slideWrap">
+    	<div class="slide one"></div>
+        <div class="slide two"></div>
+        <div class="slide three"></div>
+        <div class="slide four"></div>
+    </div>
+</div>
+        <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+ <script type="text/javascript">
+     $(document).ready(function() {
+	var slides = $('.slide');
+	var numberSlides = slides.length;
+	var slideWidth = $('.slide').width();
+	var wrap = $('#slideWrap')
+ 
+	wrap.width(numberSlides * slideWidth);
+ 
+	function moveMent() {
+		for(r=0; r<100; r++) {
+			for(i=0; i<numberSlides-1; i++) {
+				wrap
+					.delay(3000)
+					.fadeTo(500, 0)
+					.animate({				 
+						left : '-=100px'
+					})
+					.fadeTo(500, 1)	
+			}
+			wrap.delay(3000).fadeTo(500, 0).animate({left : '0'}).fadeTo(500, 1);
+		}
+	};
+ 
+	moveMent();	
+ 
+});
+
+</script>
+    </body>
+</html>
