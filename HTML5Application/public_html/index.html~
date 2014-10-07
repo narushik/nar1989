@@ -6,7 +6,7 @@ and open the template in the editor
 -->
 <html>
    <head>
-        <title>Տորթեր</title>
+        <title>Տորթ</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="menu.css">
         <script src="slider.js"></script>
