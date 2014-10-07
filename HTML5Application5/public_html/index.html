@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="f005ff">
+       Name: <input name="firstname" type="text" id ="first"><br><br><br><br>  
+       Lastname: <input name="lastname" type="text" id ="last"><br><br><br><br>
+ 
+       Age: <input name="firstname" type="text" id = "ag"><br><br><br><br>
+     
+       Login: <input name="lastname" type="text" id = "log"><br><br><br><br>
+ 
+       Password: <input name="firstname" type="text" id = "pass"><br><br><br><br>
+     
+<br><br><br>
+
+          <button type="button" value="ok" onclick="pr()">OK</button>
+          <button type="button" value="op"><a href="newhtml.html">open</a></button> 
+         <script>
+            function pr(){
+             var Array = {Name: ["Narine","Victor","Anush"], Lastname: ["Shahnazaryan","Ohanyan","Isaxanyan"]};
+             //alert(Array["Name"]);
+             var n = document.getElementById("first").value;
+             var l=  document.getElementById("last").value;
+             for (var i in Array["Lastname"]){
+               //alert(Array["Name"][i])
+             if (n==Array["Name"][i] && l==Array["Lastname"][i])
+             {alert("chisht e");}
+             else
+             {alert("sxal e");}
+             }
+            }
+        
+             </script>
+    
+    </body>
+    
+   
+</html>
